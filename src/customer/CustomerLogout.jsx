@@ -1,18 +1,19 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function ManagerLogout() {
+export default function CustomerLogout() {
   const navigate = useNavigate();
 
   useEffect(() => {
     const handleLogout = () => {
-      // Clear manager session
-      sessionStorage.removeItem('isManager');
-      sessionStorage.removeItem('managerUsername');
-      sessionStorage.removeItem('managerName');
-      sessionStorage.removeItem('managerCompany');
+      // Clear customer session
+      sessionStorage.removeItem('isCustomer');
+      sessionStorage.removeItem('customerUsername');
+      sessionStorage.removeItem('customerName');
+      sessionStorage.removeItem('customerEmail');
+      sessionStorage.removeItem('customerId');
 
-      console.log('Manager logged out successfully');
+      console.log('Customer logged out successfully');
 
       // Redirect to home page
       setTimeout(() => {
